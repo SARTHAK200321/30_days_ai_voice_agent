@@ -1,74 +1,87 @@
-# Day 27: UI-Based Configuration and Code Refactoring
+# 🎙️ AI VOICE AGENTS
 
-Welcome to Day 27 of the 30 Days of Voice Agents Challenge\! Today, we've focused on massively improving the user experience by revamping the UI and adding a settings panel to configure API keys directly in the browser.
+## Project Overview:
 
-## 🧠 What We Built
+This project is part of the 30 Days of AI Voice Agents Challenge.
+It is an AI-powered voice interaction system with the following key features:
 
-  * **API Key Configuration via UI**: We've removed the dependency on the `.env` file for runtime configuration. Now, you can enter your API keys for Murf, AssemblyAI, Gemini, and SerpAPI through a settings modal in the UI. These keys are securely stored in your browser's local storage.
-  * **Complete UI Revamp**: The user interface has been redesigned for a cleaner, more modern, and more intuitive user experience.
-  * **Code Cleanup and Refactoring**: The backend code was significantly refactored. The `config.py` file has been removed, and services are now decoupled from a global configuration, making the code cleaner and more modular.
+1.Text-to-Speech (TTS) using Murf API
+2.Speech-to-Text (STT) transcription using AssemblyAI API
+3.Conversational AI Agent powered by Google Gemini API
+4.Simple, responsive frontend UI built with HTML, CSS, JavaScript
+5.Backend server implemented with FastAPI (Python)
 
------
+The system allows users to record their voice, get transcriptions, interact with a conversational agent, and listen to AI-generated audio replies.
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack:
 
-The tech stack remains the same, but the way we handle configuration has been completely overhauled.
+### Frontend:
 
-  * **Backend**: `FastAPI`, `uvicorn`, `requests`, `assemblyai`, `google-generativeai`, `python-dotenv`, `websockets`, `google-search-results`
-  * **Frontend**: `HTML`, `Bootstrap`, `JavaScript` (with `AudioContext` and `WebSocket API`), `MediaRecorder` API
-  * **AI APIs**:
-      * Murf AI (Streaming Text-to-Speech)
-      * AssemblyAI (Real-Time Speech-to-Text with Turn Detection)
-      * Google Gemini (Streaming LLM with Function Calling)
-      * SerpAPI (Real-time Google Search Results)
+1.HTML5
+2.CSS3
+3.JavaScript (Vanilla)
 
------
+### Backend:
 
-## 🚀 Run the App
+1.FastAPI (Python)
 
-1.  **Navigate to the project directory:**
-    ```bash
-    cd "AI Voice Agent"
-    ```
-2.  **Install the required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **Run the FastAPI server:**
-    ```bash
-    uvicorn main:app --reload
-    ```
-4.  **Open your browser** and visit `http://localhost:8000`.
-5.  **Click the settings icon** in the top-right corner to enter and save your API keys. Grant microphone permissions and start chatting\!
+### APIs & AI Models:
 
------
+1.Murf API → Text-to-Speech conversion
+2.AssemblyAI API → Speech-to-Text transcription
+3.Google Gemini API → Conversational responses
 
-## 📂 Project Structure
+## ⚙️ Features:
 
-The project structure has been simplified by removing the `config.py` file.
+1.🎧 Text-to-Speech (TTS) – Converts typed text into natural-sounding audio using Murf AI.
+2.🎙️ Echo Bot v2 – Captures audio input, sends it for transcription, and plays it back.
+3.💬 LLM Audio Reply – Sends the transcription to Google Gemini and returns an AI-generated voice reply.
+4.🖥️ Simple UI – Easy-to-use interface with start/stop recording controls.
+5.🔄 Real-time Feedback – Displays transcription output instantly.
 
-```
-AI Voice Agent/
-├── main.py      # Updated to handle API keys from the client
-├── services/
-│   ├── llm.py   # Refactored to accept API keys as arguments
-│   ├── stt.py   # Refactored to accept API keys as arguments
-│   └── tts.py   # Refactored to accept API keys as arguments
-├── schemas.py
-├── templates/
-│   └── index.html # Updated with the new settings modal
-├── static/
-│   ├── script.js  # Handles API key storage and UI logic
-│   └── style.css  # Updated styles for the new UI
-├── requirements.txt
-└── .env           # No longer used for runtime config
-```
+## 📂 Project Structure:
 
------
+├── index.html        # Frontend UI
+├── .env              # For API keys
+├── script.js         # Frontend logic (recording, API calls)
+├── main.py           # FastAPI backend server
+├── requirements.txt  # Python dependencies
+└── README.md         # Project documentation
 
-## ✅ Completed Days
+## 🚀 Getting Started:
 
-  * **Day 01 - 24**: Foundational work from setting up the server to giving the agent a persona.
-  * **Day 25**: Equipped the agent with a web search skill using a tool-use paradigm.
-  * **Day 26**: Made the web search skill intelligent by adding automatic detection for when it's needed.
-  * **Day 27**: Revamped the UI and implemented a settings panel for API key configuration.
+### 1.Install Dependencies
+'pip install -r requirements.txt'
+
+### 2.Set Environment Variables
+Create a .env file in the root directory and add:
+- MURF_API_KEY=your_murf_api_key
+- ASSEMBLYAI_API_KEY=your_assemblyai_api_key
+-  GEMINI_API_KEY=your_gemini_api_key
+
+### 3.Run the Backend
+uvicorn main:app --reload
+
+### 4.Open the Frontend
+Open index.html in your browser or use Live Server.
+
+## 📌 How it Works  
+
+1. **🎙 Start Speaking** → Click the **Start** button to begin recording your voice.  
+2. **⚙ Processing** → The voice data is sent to the AI backend for transcription and analysis.  
+3. **💬 Response Generation** → AI processes the transcript and generates an appropriate reply.  
+4. **🔊 Playback** → The reply is converted to speech and played back to the user.  
+5. **❗ Error Handling** → If no voice is detected or there’s a network issue, an error message appears.  
+
+
+
+
+
+
+
+
+
+
+
+
+
