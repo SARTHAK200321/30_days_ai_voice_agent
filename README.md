@@ -1,4 +1,4 @@
-# 🎙️ NOVA - AI VOICE AGENTS
+# 🎙️ NOVA - AI VOICE AGENT
 
 ## Project Overview:
 
@@ -23,25 +23,24 @@ The system allows users to record their voice, get transcriptions, interact with
 
 ### Frontend:
 
-1.HTML5
-2.CSS3
-3.JavaScript 
+* HTML5
+* CSS3
+* JavaScript 
 
 ### Backend:
 
-1.FastAPI (Python)
+* FastAPI (Python)
 
 ### APIs & AI Models:
 
-1.Murf API (Text-to-Speech)
-2.AssemblyAI API (Speech-to-Text)
-3.Google Gemini API (Conversational AI)
-4.OpenWeather API (Weather)
-5.News API (Latest headlines)
-6.SerpAPI (Browse Search)
+* Murf API (Text-to-Speech)
+* AssemblyAI API (Speech-to-Text)
+* Google Gemini API (Conversational AI)
+* SerpAPI (Browse Search)
 
 
 ## 📂 Project Structure:
+
 
 ├── main.py            # FastAPI backend
 ├── static/            # Frontend assets (JS, CSS)
@@ -60,8 +59,8 @@ The system allows users to record their voice, get transcriptions, interact with
 ### 2.Run the server
 uvicorn main:app --reload
 
-### 3.Open the application in your browser
-http://127.0.0.1:8000
+### 3.Open the application in your browser http://localhost:8000
+
 
 ### 4.Configure API Keys
 In the UI, click the ⚙️ API Key Configuration button.
@@ -76,19 +75,19 @@ Save them — now the agent will use your keys for all tasks 🎉
 
 ## 🔧 How It Works
 
-1.🎤 Start Speaking → Click the Start button to begin recording your voice.
-2.⚙️ Processing → The voice data is sent to the AI backend for speech-to-text transcription and intent analysis.
-3.💬 Response Generation → The AI agent uses APIs (Gemini, Weather, News, SerpAPI, etc.) to generate the correct response.
-4.🔊 Playback → The reply is converted into speech (TTS via Murf API) and played back to the user.
-5.❌ Error Handling → If no voice is detected, or an API key is missing, or a network issue occurs, the system displays a friendly error message.
+* 🎤 Start Speaking → Click the Start button to begin recording your voice.
+* ⚙️ Processing → The voice data is sent to the AI backend for speech-to-text transcription and intent analysis.
+* 💬 Response Generation → The AI agent uses APIs (Gemini, Weather, News, SerpAPI, etc.) to generate the correct response.
+* 🔊 Playback → The reply is converted into speech (TTS via Murf API) and played back to the user.
+* ❌ Error Handling → If no voice is detected, or an API key is missing, or a network issue occurs, the system displays a friendly error message.
 
 ## Example Use Cases
 
-What’s the weather in Delhi right now? 
-Give me the latest sports news.
-Convert 100 USD to INR. 
-Who is the CEO of OpenAI?
-Tell me a motivational quote.
+* What’s the weather in Delhi right now? 
+* Give me the latest sports news.
+* Convert 100 USD to INR. 
+* Who is the CEO of OpenAI?
+* Tell me a motivational quote.
 
 
 
