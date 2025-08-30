@@ -1,17 +1,23 @@
-# 🎙️ AI VOICE AGENTS
+# 🎙️ NOVA - AI VOICE AGENTS
 
 ## Project Overview:
 
-This project is part of the 30 Days of AI Voice Agents Challenge.
-It is an AI-powered voice interaction system with the following key features:
+This project was developed as part of the 30 Days of AI Voice Agents Challenge by Murf AI.
+It is a conversational voice agent capable of handling speech-to-text, text-to-speech, intelligent task execution, and real-time search through various API integrations.
 
-1.Text-to-Speech (TTS) using Murf API
-2.Speech-to-Text (STT) transcription using AssemblyAI API
-3.Conversational AI Agent powered by Google Gemini API
-4.Simple, responsive frontend UI built with HTML, CSS, JavaScript
-5.Backend server implemented with FastAPI (Python)
+The system allows users to record their voice, get transcriptions, interact with a conversational agent, browse live search results, and listen to AI-generated audio replies.
 
-The system allows users to record their voice, get transcriptions, interact with a conversational agent, and listen to AI-generated audio replies.
+## 🚀 Features Implemented:
+
+ * Text-to-Speech (TTS) using Murf API.
+ * Speech-to-Text (STT) transcription using AssemblyAI API.
+ * Conversational Agent powered by Google Gemini API.
+ * Weather Skill – fetches live weather updates.
+ * News Skill – retrieves latest headlines by category (politics, sports, tech, etc.)
+ * Browse Search – integrated SerpAPI for real-time web search and latest information.
+ * API Key Configuration – users can securely enter their own API keys via the UI and use the agent with their credentials.
+ * Frontend Enhancements – responsive UI with HTML, CSS, JavaScript.
+ * Backend Server implemented with FastAPI (Python).
 
 ## 🛠️ Tech Stack:
 
@@ -19,7 +25,7 @@ The system allows users to record their voice, get transcriptions, interact with
 
 1.HTML5
 2.CSS3
-3.JavaScript (Vanilla)
+3.JavaScript 
 
 ### Backend:
 
@@ -27,54 +33,62 @@ The system allows users to record their voice, get transcriptions, interact with
 
 ### APIs & AI Models:
 
-1.Murf API → Text-to-Speech conversion
-2.AssemblyAI API → Speech-to-Text transcription
-3.Google Gemini API → Conversational responses
+1.Murf API (Text-to-Speech)
+2.AssemblyAI API (Speech-to-Text)
+3.Google Gemini API (Conversational AI)
+4.OpenWeather API (Weather)
+5.News API (Latest headlines)
+6.SerpAPI (Browse Search)
 
-## ⚙️ Features:
-
-1.🎧 Text-to-Speech (TTS) – Converts typed text into natural-sounding audio using Murf AI.
-2.🎙️ Echo Bot v2 – Captures audio input, sends it for transcription, and plays it back.
-3.💬 LLM Audio Reply – Sends the transcription to Google Gemini and returns an AI-generated voice reply.
-4.🖥️ Simple UI – Easy-to-use interface with start/stop recording controls.
-5.🔄 Real-time Feedback – Displays transcription output instantly.
 
 ## 📂 Project Structure:
 
-├── index.html        # Frontend UI
-├── .env              # For API keys
-├── script.js         # Frontend logic (recording, API calls)
-├── main.py           # FastAPI backend server
-├── requirements.txt  # Python dependencies
-└── README.md         # Project documentation
+├── main.py            # FastAPI backend
+├── static/            # Frontend assets (JS, CSS)
+│   ├── script.js
+├── templates/         # HTML templates
+│   ├── index.html
+├── requirements.txt      # Dependencies
+├── schemas.py         # Data models
+├── README.md          # Documentation 
 
 ## 🚀 Getting Started:
 
 ### 1.Install Dependencies
 'pip install -r requirements.txt'
 
-### 2.Set Environment Variables
-Create a .env file in the root directory and add:
-- MURF_API_KEY=your_murf_api_key
-- ASSEMBLYAI_API_KEY=your_assemblyai_api_key
--  GEMINI_API_KEY=your_gemini_api_key
-
-### 3.Run the Backend
+### 2.Run the server
 uvicorn main:app --reload
 
-### 4.Open the Frontend
-Open index.html in your browser or use Live Server.
+### 3.Open the application in your browser
+http://127.0.0.1:8000
 
-## 📌 How it Works  
+### 4.Configure API Keys
+In the UI, click the ⚙️ API Key Configuration button.
+Enter your keys for:
+ * Murf API
+ * AssemblyAI API
+ * Gemini API 
+ * Serp API
+Save them — now the agent will use your keys for all tasks 🎉
 
-1. **🎙 Start Speaking** → Click the **Start** button to begin recording your voice.  
-2. **⚙ Processing** → The voice data is sent to the AI backend for transcription and analysis.  
-3. **💬 Response Generation** → AI processes the transcript and generates an appropriate reply.  
-4. **🔊 Playback** → The reply is converted to speech and played back to the user.  
-5. **❗ Error Handling** → If no voice is detected or there’s a network issue, an error message appears.  
 
 
+## 🔧 How It Works
 
+1.🎤 Start Speaking → Click the Start button to begin recording your voice.
+2.⚙️ Processing → The voice data is sent to the AI backend for speech-to-text transcription and intent analysis.
+3.💬 Response Generation → The AI agent uses APIs (Gemini, Weather, News, SerpAPI, etc.) to generate the correct response.
+4.🔊 Playback → The reply is converted into speech (TTS via Murf API) and played back to the user.
+5.❌ Error Handling → If no voice is detected, or an API key is missing, or a network issue occurs, the system displays a friendly error message.
+
+## Example Use Cases
+
+What’s the weather in Delhi right now? 
+Give me the latest sports news.
+Convert 100 USD to INR. 
+Who is the CEO of OpenAI?
+Tell me a motivational quote.
 
 
 
