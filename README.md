@@ -59,7 +59,7 @@ The system allows users to record their voice, get transcriptions, interact with
 ### 2.Run the server
 uvicorn main:app --reload
 
-### 3.Open the application in your browser 'http://localhost:8000'
+### 3.Open the application in your browser `http://localhost:8000`
 
 
 ### 4.Configure API Keys
